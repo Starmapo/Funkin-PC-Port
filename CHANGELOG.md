@@ -23,3 +23,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Unneeded libraries from `Project.xml`.
 - Newgrounds support, as this won't be published on Newgrounds.
 - Polymod support, as it was left unfinished.
+- MP3 files for HTML5 builds. OGG files are used instead.
