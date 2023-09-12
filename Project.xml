@@ -113,10 +113,8 @@
 	<haxelib name="hscript" />
 
 	<haxelib name="flixel-ui" />
-	<haxelib name="faxe" if='switch'/>
 	<haxelib name="polymod"/>
 	<haxelib name="newgrounds"/>
-	<haxelib name="hxcpp-debug-server" if="desktop debug"/>
 
 	<haxelib name="discord_rpc" if="cpp"/> <!-- doesn't work with neko -->
 
