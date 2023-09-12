@@ -92,8 +92,6 @@
 	<assets path="assets/week7"    library="week7"    exclude="*.fla|*.ogg" if="web"/>
 	<assets path="assets/week7"    library="week7"    exclude="*.fla|*.mp3" unless="web"/>
 
-	<template path="example_mods" rename="mods" />
-
 	<assets path='art/readme.txt' rename='do NOT readme.txt' />
 	
 	<assets path="CHANGELOG.md" rename='changelog.txt'/>
@@ -113,7 +111,6 @@
 	<haxelib name="hscript" />
 
 	<haxelib name="flixel-ui" />
-	<haxelib name="polymod"/>
 
 	<haxelib name="discord_rpc" if="cpp"/> <!-- doesn't work with neko -->
 
