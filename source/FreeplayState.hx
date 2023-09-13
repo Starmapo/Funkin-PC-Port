@@ -3,16 +3,11 @@ package;
 #if discord_rpc
 import Discord.DiscordClient;
 #end
-import flash.text.TextField;
 import flixel.FlxG;
 import flixel.FlxSprite;
-import flixel.addons.display.FlxGridOverlay;
 import flixel.group.FlxGroup.FlxTypedGroup;
-import flixel.math.FlxMath;
 import flixel.text.FlxText;
-import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
-import lime.utils.Assets;
 
 using StringTools;
 
@@ -149,8 +144,6 @@ class FreeplayState extends MusicBeatState
 		// selector.size = 40;
 		// selector.text = ">";
 		// add(selector);
-
-		var swag:Alphabet = new Alphabet(1, 0, "swag");
 
 		// JUST DOIN THIS SHIT FOR TESTING!!!
 		/* 

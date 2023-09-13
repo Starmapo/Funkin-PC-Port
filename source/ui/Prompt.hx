@@ -1,13 +1,8 @@
 package ui;
 
-import ui.AtlasText;
-import ui.MenuList;
-
 import flixel.FlxG;
 import flixel.FlxSprite;
-import flixel.graphics.frames.FlxAtlasFrames;
-import flixel.text.FlxText;
-import flixel.util.FlxColor;
+import ui.AtlasText.BoldText;
 
 class Prompt extends flixel.FlxSubState
 {

@@ -1,8 +1,8 @@
 package ui;
 
 import flixel.FlxSprite;
-import flixel.group.FlxSpriteGroup;
 import flixel.graphics.frames.FlxAtlasFrames;
+import flixel.group.FlxSpriteGroup.FlxTypedSpriteGroup;
 import flixel.util.FlxStringUtil;
 
 @:forward

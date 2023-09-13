@@ -11,5 +11,8 @@
 		}
 	},
 	"haxe.enableExtendedIndentation": true,
-	"lime.executable": "lix lime"
+	"lime.executable": "lix lime",
+	"haxecheckstyle.sourceFolders": [
+		"source"
+	]
 }

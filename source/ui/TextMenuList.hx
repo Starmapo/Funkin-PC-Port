@@ -1,7 +1,9 @@
 package ui;
 
-import ui.AtlasText;
-import ui.MenuList;
+import ui.AtlasText.AtlasFont;
+import ui.MenuList.MenuTypedItem;
+import ui.MenuList.MenuTypedList;
+import ui.MenuList.NavControls;
 
 class TextMenuList extends MenuTypedList<TextMenuItem>
 {

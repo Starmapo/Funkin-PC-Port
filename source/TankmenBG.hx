@@ -2,7 +2,6 @@ package;
 
 import flixel.FlxG;
 import flixel.FlxSprite;
-import haxe.display.Display.Package;
 
 class TankmenBG extends FlxSprite
 {

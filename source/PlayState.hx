@@ -2,24 +2,13 @@ package;
 
 import Section.SwagSection;
 import Song.SwagSong;
-import WiggleEffect.WiggleEffectType;
-import flixel.FlxBasic;
 import flixel.FlxCamera;
 import flixel.FlxG;
-import flixel.FlxGame;
 import flixel.FlxObject;
 import flixel.FlxSprite;
-import flixel.FlxState;
 import flixel.FlxSubState;
-import flixel.addons.display.FlxGridOverlay;
 import flixel.addons.effects.FlxTrail;
-import flixel.addons.effects.FlxTrailArea;
-import flixel.addons.effects.chainable.FlxEffectSprite;
-import flixel.addons.effects.chainable.FlxWaveEffect;
 import flixel.addons.transition.FlxTransitionableState;
-import flixel.graphics.atlas.FlxAtlas;
-import flixel.graphics.frames.FlxAtlasFrames;
-import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.group.FlxGroup;
 import flixel.math.FlxAngle;
 import flixel.math.FlxMath;
@@ -30,19 +19,9 @@ import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.ui.FlxBar;
-import flixel.util.FlxCollision;
 import flixel.util.FlxColor;
 import flixel.util.FlxSort;
-import flixel.util.FlxStringUtil;
 import flixel.util.FlxTimer;
-import haxe.Json;
-import lime.utils.Assets;
-import openfl.Lib;
-import openfl.display.BitmapData;
-import openfl.display.BlendMode;
-import openfl.display.StageQuality;
-import openfl.filters.ShaderFilter;
-import shaderslmfao.BuildingShaders.BuildingShader;
 import shaderslmfao.BuildingShaders;
 import shaderslmfao.ColorSwap;
 import ui.PreferencesMenu;
@@ -125,7 +104,6 @@ class PlayState extends MusicBeatState
 	var santa:FlxSprite;
 
 	var bgGirls:BackgroundGirls;
-	var wiggleShit:WiggleEffect = new WiggleEffect();
 
 	var tankmanRun:FlxTypedGroup<TankmenBG>;
 	var gfCutsceneLayer:FlxGroup;
@@ -458,9 +436,6 @@ class PlayState extends MusicBeatState
 			case 'thorns':
 				curStage = 'schoolEvil';
 
-				var waveEffectBG = new FlxWaveEffect(FlxWaveMode.ALL, 2, -1, 3, 2);
-				var waveEffectFG = new FlxWaveEffect(FlxWaveMode.ALL, 2, -1, 5, 2);
-
 				var posX = 400;
 				var posY = 200;
 
@@ -484,15 +459,7 @@ class PlayState extends MusicBeatState
 				// fg.setGraphicSize(Std.int(fg.width * 6));
 				// fg.updateHitbox();
 				add(fg);
-
-				wiggleShit.effectType = WiggleEffectType.DREAMY;
-				wiggleShit.waveAmplitude = 0.01;
-				wiggleShit.waveFrequency = 60;
-				wiggleShit.waveSpeed = 0.8;
 			 */
-
-			// bg.shader = wiggleShit.shader;
-			// fg.shader = wiggleShit.shader;
 
 			/* 
 				var waveSprite = new FlxEffectSprite(bg, [waveEffectBG]);
@@ -1347,7 +1314,7 @@ class PlayState extends MusicBeatState
 	function initDiscord():Void
 	{
 		#if discord_rpc
-		storyDifficultyText = difficultyString();
+		storyDifficultyText = CoolUtil.difficultyString();
 		iconRPC = SONG.player2;
 
 		// To avoid having duplicate images in Discord assets
@@ -2108,7 +2075,6 @@ class PlayState extends MusicBeatState
 			var dunceNote:Note = unspawnNotes[0];
 			notes.add(dunceNote);
 
-			var index:Int = unspawnNotes.indexOf(dunceNote);
 			unspawnNotes.shift();
 		}
 
@@ -2626,12 +2592,6 @@ class PlayState extends MusicBeatState
 			controls.NOTE_UP_P,
 			controls.NOTE_RIGHT_P
 		];
-		var releaseArray:Array<Bool> = [
-			controls.NOTE_LEFT_R,
-			controls.NOTE_DOWN_R,
-			controls.NOTE_UP_R,
-			controls.NOTE_RIGHT_R
-		];
 
 		// HOLDS, check for sustain notes
 		if (holdArray.contains(true) && /*!boyfriend.stunned && */ generatedMusic)
@@ -2986,7 +2946,6 @@ class PlayState extends MusicBeatState
 			// Conductor.changeBPM(SONG.bpm);
 		}
 		// FlxG.log.add('change bpm' + SONG.notes[Std.int(curStep / 16)].changeBPM);
-		wiggleShit.update(Conductor.crochet);
 
 		// HARDCODING FOR MILF ZOOMS!
 

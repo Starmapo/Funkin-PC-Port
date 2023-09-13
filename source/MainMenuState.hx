@@ -7,19 +7,16 @@ import flixel.FlxState;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.effects.FlxFlicker;
 import flixel.graphics.frames.FlxAtlasFrames;
-import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
-import flixel.ui.FlxButton;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import lime.app.Application;
-import ui.AtlasMenuList;
-import ui.MenuList;
+import ui.AtlasMenuList.AtlasMenuItem;
+import ui.MenuList.MenuTypedList;
 import ui.OptionsState;
 import ui.PreferencesMenu;
-import ui.Prompt;
 
 using StringTools;
 
@@ -132,7 +129,7 @@ class MainMenuState extends MusicBeatState
 		menuItems.enabled = true;
 	}
 
-	function onMenuItemChange(selected:MenuItem)
+	function onMenuItemChange(selected:MainMenuItem)
 	{
 		camFollow.setPosition(selected.getGraphicMidpoint().x, selected.getGraphicMidpoint().y);
 	}

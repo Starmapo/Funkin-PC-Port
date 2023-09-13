@@ -3,7 +3,6 @@ package ui;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxSubState;
-import flixel.addons.transition.FlxTransitionableState;
 import flixel.group.FlxGroup;
 import flixel.util.FlxSignal;
 

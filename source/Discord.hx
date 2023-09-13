@@ -11,27 +11,6 @@ import discord_rpc.DiscordRpc;
 class DiscordClient
 {
 	#if discord_rpc
-	public function new()
-	{
-		trace("Discord Client starting...");
-		DiscordRpc.start({
-			clientID: "814588678700924999",
-			onReady: onReady,
-			onError: onError,
-			onDisconnected: onDisconnected
-		});
-		trace("Discord Client started.");
-
-		while (true)
-		{
-			DiscordRpc.process();
-			sleep(2);
-			// trace("Discord Client Update");
-		}
-
-		DiscordRpc.shutdown();
-	}
-
 	public static function shutdown()
 	{
 		DiscordRpc.shutdown();
@@ -59,9 +38,25 @@ class DiscordClient
 
 	public static function initialize()
 	{
-		var DiscordDaemon = sys.thread.Thread.create(() ->
+		sys.thread.Thread.create(() ->
 		{
-			new DiscordClient();
+			trace("Discord Client starting...");
+			DiscordRpc.start({
+				clientID: "814588678700924999",
+				onReady: onReady,
+				onError: onError,
+				onDisconnected: onDisconnected
+			});
+			trace("Discord Client started.");
+
+			while (true)
+			{
+				DiscordRpc.process();
+				sleep(2);
+				// trace("Discord Client Update");
+			}
+
+			DiscordRpc.shutdown();
 		});
 		trace("Discord Client initialized");
 	}

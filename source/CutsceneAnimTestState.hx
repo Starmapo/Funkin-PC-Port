@@ -1,18 +1,13 @@
 package;
 
 import animate.FlxAnimate;
-import flixel.FlxG;
+// import animateAtlasPlayer.assets.AssetManager;
+// import animateAtlasPlayer.core.Animation;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.addons.display.FlxGridOverlay;
-import flixel.group.FlxGroup.FlxTypedGroup;
-import flixel.math.FlxPoint;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
-import openfl.display.BitmapData;
-
-// import animateAtlasPlayer.assets.AssetManager;
-// import animateAtlasPlayer.core.Animation;
 class CutsceneAnimTestState extends FlxState
 {
 	var cutsceneGroup:CutsceneCharacter;

@@ -1,7 +1,6 @@
 package;
 
 import flixel.FlxG;
-import flixel.FlxGame;
 import flixel.FlxSprite;
 import flixel.addons.transition.FlxTransitionSprite.GraphicTransTileDiamond;
 import flixel.addons.transition.FlxTransitionableState;
@@ -11,25 +10,18 @@ import flixel.group.FlxGroup;
 import flixel.input.gamepad.FlxGamepad;
 import flixel.math.FlxPoint;
 import flixel.math.FlxRect;
-import flixel.system.FlxAssets.FlxGraphicAsset;
-import flixel.system.FlxAssets;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import lime.app.Application;
-import lime.ui.Window;
 import openfl.Assets;
 import openfl.display.Sprite;
 import openfl.events.AsyncErrorEvent;
-import openfl.events.AsyncErrorEvent;
-import openfl.events.Event;
 import openfl.events.MouseEvent;
 import openfl.events.NetStatusEvent;
 import openfl.media.Video;
-import openfl.net.NetConnection;
 import openfl.net.NetStream;
-import shaderslmfao.BuildingShaders.BuildingShader;
 import shaderslmfao.BuildingShaders;
 import shaderslmfao.ColorSwap;
 import ui.PreferencesMenu;
@@ -38,11 +30,6 @@ using StringTools;
 
 #if discord_rpc
 import Discord.DiscordClient;
-#end
-#if desktop
-import sys.FileSystem;
-import sys.io.File;
-import sys.thread.Thread;
 #end
 
 class TitleState extends MusicBeatState

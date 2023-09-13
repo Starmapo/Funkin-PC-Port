@@ -3,7 +3,6 @@ package;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
-import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.math.FlxMath;
 import flixel.util.FlxTimer;
 import haxe.io.Path;
@@ -75,8 +74,6 @@ class LoadingState extends MusicBeatState
 	{
 		if (!Assets.cache.hasSound(path))
 		{
-			var library = Assets.getLibrary("songs");
-			var symbolPath = path.split(":").pop();
 			// @:privateAccess
 			// library.types.set(symbolPath, SOUND);
 			// @:privateAccess

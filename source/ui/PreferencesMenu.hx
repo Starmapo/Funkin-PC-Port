@@ -4,8 +4,6 @@ import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
-import flixel.group.FlxGroup;
-import flixel.util.FlxColor;
 import ui.AtlasText.AtlasFont;
 import ui.TextMenuList.TextMenuItem;
 

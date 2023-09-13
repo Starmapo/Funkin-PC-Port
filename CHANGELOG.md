@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Friday Night Funkin' (the game).
 - Visual Studio Code workspace files.
 - [lix](https://github.com/lix-pm/lix.client) support.
+- [Haxe Checkstyle](https://github.com/HaxeCheckstyle/haxe-checkstyle) settings.
 
 ### Changed
 

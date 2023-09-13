@@ -1,17 +1,17 @@
 package ui;
 
-import Controls;
+import Controls.Control;
+import Controls.Device;
 import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
-import flixel.group.FlxGroup;
-import flixel.input.actions.FlxActionInput;
+import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.input.gamepad.FlxGamepadInputID;
 import flixel.input.keyboard.FlxKey;
-import ui.AtlasText;
-import ui.MenuList;
-import ui.TextMenuList;
+import ui.AtlasText.BoldText;
+import ui.MenuList.MenuTypedList;
+import ui.TextMenuList.TextMenuItem;
 
 class ControlsMenu extends ui.OptionsState.Page
 {
@@ -176,7 +176,6 @@ class ControlsMenu extends ui.OptionsState.Page
 		for (item in controlGrid.members)
 			item.updateDevice(currentDevice);
 
-		var inputName = device == Keys ? "key" : "button";
 		var cancel = device == Keys ? "Escape" : "Back";
 		// todo: alignment
 		if (device == Keys)
