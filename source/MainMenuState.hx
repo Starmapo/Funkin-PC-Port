@@ -115,10 +115,6 @@ class MainMenuState extends MusicBeatState
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
 
-		versionShit.text += '(Newgrounds exclusive preview)';
-
-		// NG.core.calls.event.logEvent('swag').send();
-
 		super.create();
 	}
 

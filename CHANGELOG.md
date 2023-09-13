@@ -26,3 +26,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Newgrounds support, as this won't be published on Newgrounds.
 - Polymod support, as it was left unfinished.
 - MP3 files for HTML5 builds. OGG files are used instead.
+- "Newgrounds exclusive preview" text on main menu.
+
+### Fixed
+
+- Title screen not having a fade transition when first booting up.
+- FPS counter visibility not updating on first toggle.
