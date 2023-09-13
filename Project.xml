@@ -37,7 +37,7 @@
 	<set name="BUILD_DIR" value="export/release" unless="debug" />
 	<set name="BUILD_DIR" value="export/32bit" if="32bit" />
 
-	<classpath name="source" />
+	<source path="source" />
 
 	<assets path="assets/preload" rename="assets"/>
 	
@@ -88,12 +88,9 @@
 	<!-- _______________________________ Libraries ______________________________ -->
 
 	<haxelib name="flixel" />
-	<haxedev set='webgl' />
-
 	<haxelib name="flixel-addons" />
-	<haxelib name="hscript" />
-
 	<haxelib name="flixel-ui" />
+	<haxelib name="hscript" />
 
 	<haxelib name="discord_rpc" if="cpp"/> <!-- doesn't work with neko -->
 

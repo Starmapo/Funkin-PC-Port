@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Cleaned up `Project.xml`.
 - Re-enabled Discord Rich Presence for CPP builds.
+- Updated Haxe and libraries to the latest versions.
 
 ### Removed
 
