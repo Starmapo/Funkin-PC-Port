@@ -591,8 +591,6 @@ class Character extends FlxSprite
 				{
 					if (Conductor.songPosition > animationNotes[0][0])
 					{
-						trace('played shoot anim' + animationNotes[0][1]);
-
 						var shootAnim:Int = 1;
 
 						if (animationNotes[0][1] >= 2)

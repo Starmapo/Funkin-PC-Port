@@ -121,16 +121,20 @@ class Note extends FlxSprite
 		{
 			case 0:
 				x += swagWidth * 0;
-				animation.play('purpleScroll');
+				if (!isSustainNote)
+					animation.play('purpleScroll');
 			case 1:
 				x += swagWidth * 1;
-				animation.play('blueScroll');
+				if (!isSustainNote)
+					animation.play('blueScroll');
 			case 2:
 				x += swagWidth * 2;
-				animation.play('greenScroll');
+				if (!isSustainNote)
+					animation.play('greenScroll');
 			case 3:
 				x += swagWidth * 3;
-				animation.play('redScroll');
+				if (!isSustainNote)
+					animation.play('redScroll');
 		}
 
 		// trace(prevNote);

@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Cleaned up `Project.xml`.
 - Re-enabled Discord Rich Presence for CPP builds.
 - Updated Haxe and libraries to the latest versions.
+- The starting note splash for precaching is now more transparent.
 
 ### Removed
 
@@ -33,3 +34,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Title screen not having a fade transition when first booting up.
 - FPS counter visibility not updating on first toggle.
+- Warnings in the debugger's log.

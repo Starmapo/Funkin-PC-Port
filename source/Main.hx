@@ -70,7 +70,6 @@ class Main extends Sprite
 		initialState = TitleState;
 		#end
 
-		FlxG.save.bind('funkin', 'ninjamuffin99');
 		addChild(new FlxGame(gameWidth, gameHeight, initialState, framerate, framerate, skipSplash, startFullscreen));
 
 		#if !mobile
