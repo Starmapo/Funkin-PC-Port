@@ -528,7 +528,6 @@ class Character extends FlxSprite
 
 		TankmenBG.animationNotes = animationNotes;
 
-		trace(animationNotes);
 		animationNotes.sort(sortAnims);
 	}
 
@@ -650,7 +649,8 @@ class Character extends FlxSprite
 					else
 						playAnim('danceLeft');
 				default:
-					playAnim('idle');
+					if (animation.exists('idle'))
+						playAnim('idle');
 			}
 		}
 	}

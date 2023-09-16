@@ -1,61 +1,21 @@
 package;
 
-import flixel.FlxBasic;
-import flixel.FlxG;
-import openfl.events.NetStatusEvent;
-import openfl.media.Video;
-import openfl.net.NetConnection;
-import openfl.net.NetStream;
-
-class FlxVideo extends FlxBasic
+class FlxVideo
 {
-	var video:Video;
-	var netStream:NetStream;
-
-	public var finishCallback:Void->Void;
+	var backend:VideoBackend;
 
 	/**
 	 * Doesn't actually interact with Flixel shit, only just a pleasant to use class    
 	 */
-	public function new(vidSrc:String)
+	public function new(vidSrc:String, finishCallback:Void->Void)
 	{
-		super();
-
-		video = new Video();
-		video.x = 0;
-		video.y = 0;
-
-		FlxG.addChildBelowMouse(video);
-
-		var netConnection = new NetConnection();
-		netConnection.connect(null);
-
-		netStream = new NetStream(netConnection);
-		netStream.client = {onMetaData: client_onMetaData};
-		netConnection.addEventListener(NetStatusEvent.NET_STATUS, netConnection_onNetStatus);
-		netStream.play(Paths.file(vidSrc));
+		backend = new VideoBackend(vidSrc, finishCallback);
 	}
 
-	public function finishVideo():Void
+	public function finish()
 	{
-		netStream.dispose();
-		FlxG.removeChild(video);
-
-		if (finishCallback != null)
-			finishCallback();
-	}
-
-	public function client_onMetaData(metaData:Dynamic)
-	{
-		video.attachNetStream(netStream);
-
-		video.width = FlxG.width;
-		video.height = FlxG.height;
-	}
-
-	private function netConnection_onNetStatus(event:NetStatusEvent):Void
-	{
-		if (event.info.code == 'NetStream.Play.Complete')
-			finishVideo();
+		backend.finish();
 	}
 }
+
+@:noCompletion private typedef VideoBackend = #if html5 video.HTML5Video #else video.NativeVideo #end;
