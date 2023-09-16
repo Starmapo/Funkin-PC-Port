@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## 1.0.0 - 2023-09-16
+
 ### Added
 
 - Friday Night Funkin' (the game).
@@ -35,4 +37,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Title screen not having a fade transition when first booting up.
 - FPS counter visibility not updating on first toggle.
-- Warnings in the debugger's log.
+- Warnings in the debug log.
